@@ -88,7 +88,7 @@ def save_code():
         )
         return
 
-    code = f'''"""Generated Custom Turtle Shape."""
+    code = """Generated Custom Turtle Shape."""
 
 import turtle
 
