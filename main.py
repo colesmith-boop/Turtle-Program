@@ -3,7 +3,7 @@
 import tkinter as tk 
 
 
-#Program settings
+# Program settings
 CANVAS_WIDTH = 400
 CANVAS_HEIGHT = 300
 CENTRE_X = CANVAS_WIDTH // 2
