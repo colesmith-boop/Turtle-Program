@@ -7,7 +7,7 @@ import tkinter as tk
 CANVAS_WIDTH = 400
 CANVAS_HEIGHT = 300
 CENTRE_X = CANVAS_WIDTH // 2
-CENTRE_Y = CANVAS HEIGHT // 2
+CENTRE_Y = CANVAS_HEIGHT // 2
 
 points = []
 
@@ -37,11 +37,11 @@ def add_point(event):
             event.y
         )
 
-    coordinate_label.config(
-        text=f"Coordinates: {tuple(points)}"
-    )
+  coordinate_label.config(
+      text=f"Coordinates: {tuple(points)}"
+  )
 
-    print("Coordinates:", tuple(points))
+  print("Coordinates:", tuple(points))
 
 
 def create_shape():
@@ -93,7 +93,7 @@ def save_code():
 import turtle
 
 
-screen = turtle.screen()
+screen = turtle.Screen()
 screen.title("My custom turtle shape")
 
 shape = turtle.Shape("compound")
@@ -116,6 +116,19 @@ my_turtle.shape("custom_shape")
 
 turtle.done()
 ... 
+
+    with open(
+        "custom_turtle_shape.py",
+        "w",
+        encoding="utf-8"
+    ) as file:
+        file.write(code)
+
+    status_label.config(
+        text="Python Turtle code saved!"
+    )
+
+
 
 
 
