@@ -1,6 +1,6 @@
 """Custom Turtle Shape Creator."""
 
-import tkinter as tk 
+import tkinter as tk
 
 
 # Program settings
@@ -14,7 +14,7 @@ points = []
 
 def add_point(event):
     """Record a point clicked by the user."""
-    x = event.x  - CENTRE_X
+    x = event.x - CENTRE_X
     y = CENTRE_Y - event.y
 
     points.append((x, y))
@@ -22,27 +22,26 @@ def add_point(event):
     canvas.create_oval(
         event.x - 3,
         event.y - 3,
-        event.x + 3, 
+        event.x + 3,
         event.y + 3,
         fill="black"
-)
+    )
 
-  if len(points) >= 2:
-    previous = points[-2]
+    if len(points) >= 2:
+        previous = points[-2]
 
-    canvas.create_line(
+        canvas.create_line(
             previous[0] + CENTRE_X,
             CENTRE_Y - previous[1],
             event.x,
             event.y
         )
 
-  coordinate_label.config(
-      text=f"Coordinates: {tuple(points)}"
-  )
+    coordinate_label.config(
+        text=f"Coordinates: {tuple(points)}"
+    )
 
-  print("Coordinates:", tuple(points))
-
+    print("Coordinates:", tuple(points))
 
 def create_shape():
     """Show the completed shape."""
