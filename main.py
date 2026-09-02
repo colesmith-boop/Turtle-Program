@@ -129,6 +129,87 @@ turtle.done()
     )
 
 
+def start_program():
+    """Open the drawing interface."""
+    welcome.destroy()
+
+    title_label = tk.Label(
+        window,
+        text="Custom Turtle Shape Creator",
+        font=("Arial", 18, "bold")
+    )
+    title_label.pack(pady=10)
+
+    instructions = tk.Label(
+        window,
+        text="Click around the canvas to draw your shape."
+    )
+    instructions.pack()
+
+    global canvas
+    canvas = tk.Canvas(
+        window,
+        width=CANVAS_WIDTH,
+        height=CANVAS_HEIGHT,
+        bg="white"
+    )
+    canvas.pack(pady=10)
+
+    canvas.bind(
+        "<Button-1>",
+        add_point
+    )
+
+    global coordinate_label
+    coordinate_label = tk.Label(
+        window,
+        text="Coordinates: ()",
+        font=("Arial", 10)
+    )
+    coordinate_label.pack(pady=5)
+
+    button_frame = tk.Frame(window)
+    button_frame.pack(pady=5)
+
+    create_button = tk.Button(
+        button_frame,
+        text="Create Shape",
+        command=create_shape
+    )
+    create_button.grid(
+        row=0,
+        column=0,
+        padx=5
+    )
+
+    clear_button = tk.Button(
+        button_frame,
+        text="Clear",
+        command=clear_shape
+    )
+    clear_button.grid(
+        row=0,
+        column=1,
+        padx=5
+    )
+
+    save_button = tk.Button(
+        button_frame,
+        text="Save Python Code",
+        command=save_code
+    )
+    save_button.grid(
+        row=0,
+        column=2,
+        padx=5
+    )
+
+    global status_label
+    status_label = tk.Label(
+        window,
+        text="Ready to draw."
+    )
+    status_label.pack(pady=5)
 
 
 
