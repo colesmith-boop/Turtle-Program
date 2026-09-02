@@ -91,7 +91,7 @@ def save_code():
     code = f'''"""Generated Custom Turtle Shape."""
 
 import turtle
-'''
+
 
 screen = turtle.Screen()
 screen.title("My custom turtle shape")
@@ -115,7 +115,7 @@ my_turtle = turtle.Turtle()
 my_turtle.shape("custom_shape")
 
 turtle.done()
-... 
+'''
 
     with open(
         "custom_turtle_shape.py",
