@@ -13,19 +13,19 @@ points = []
 
 
 def add_point(event):
-  """Record a point clicked by the user."""
-  x = event.x  - CENTRE_X
-  y = CENTRE_Y - event.y
+    """Record a point clicked by the user."""
+    x = event.x  - CENTRE_X
+    y = CENTRE_Y - event.y
 
-  points.append((x, y))
+    points.append((x, y))
 
-  canvas.create_oval(
-      event.x - 3,
-      event.y - 3,
-      event.x + 3, 
-      event.y + 3,
-      fill="black"
-  )
+    canvas.create_oval(
+        event.x - 3,
+        event.y - 3,
+        event.x + 3, 
+        event.y + 3,
+        fill="black"
+)
 
   if len(points) >= 2:
     previous = points[-2]
@@ -226,7 +226,7 @@ window.geometry(
 
 # Welcome screen
 welcome = tk.Frame(window)
-welcome.pack(expand=true)
+welcome.pack(expand=True)
 
 welcome_title = tk.Label(
   welcome, 
