@@ -90,6 +90,33 @@ def save_code():
 
     code = f'''"""Generated Custom Turtle Shape."""
 
+import turtle
+
+
+screen = turtle.screen()
+screen.title("My custom turtle shape")
+
+shape = turtle.Shape("compound")
+
+shape_points = {tuple(points)}
+
+shape.addcomponent(
+    shape_points,
+    "lightblue",
+    "black"
+)
+
+screen.register_shape(
+    "custom_shape",
+    shape
+)
+
+my_turtle = turtle.Turtle()
+my_turtle.shape("custom_shape")
+
+turtle.done()
+... 
+
 
 
 
