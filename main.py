@@ -88,10 +88,10 @@ def save_code():
         )
         return
 
-    code = """Generated Custom Turtle Shape."""
+    code = f'''"""Generated Custom Turtle Shape."""
 
 import turtle
-
+'''
 
 screen = turtle.Screen()
 screen.title("My custom turtle shape")
