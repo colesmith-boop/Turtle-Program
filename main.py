@@ -14,8 +14,8 @@ points = []
 
 def add_point(event):
     """Record a point clicked by the user."""
-    x = event.x - CENTRE_X
-    y = CENTRE_Y - event.y
+    x = event.x
+    y = event.y
 
     points.append((x, y))
 
