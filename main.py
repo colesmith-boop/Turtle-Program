@@ -45,12 +45,6 @@ def add_point(event):
 
 def create_shape():
     """Show the completed shape."""
-    if len(points) < 3:
-        status_label.config(
-            text="Please add at least 3 points."
-        )
-        return
-
     canvas.create_polygon(
         [
             (x + CENTRE_X, CENTRE_Y - y)
