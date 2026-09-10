@@ -1,7 +1,6 @@
 """Custom Turtle Shape Creator."""
 
 import tkinter as tk
-import os 
 
 
 # Program settings
@@ -82,8 +81,6 @@ def clear_shape():
 
 def save_code():
     """Generate and save a Turtle Python program."""
-    print("Saved to:", os.path.abspath("custom_turtle_shape.py"))
-    
     if len(points) < 3:
         status_label.config(
             text="Create a shape before saving."
