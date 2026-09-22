@@ -43,13 +43,14 @@ def add_point(event):
 
     print("Coordinates:", tuple(points))
 
+
 def create_shape():
     """Show the completed shape."""
     if len(points) < 3:
         status_label.config(
             text="Please add at least 3 points."
         )
-        return    
+        return
     
     canvas.create_polygon(
         [
@@ -228,9 +229,9 @@ welcome = tk.Frame(window)
 welcome.pack(expand=True)
 
 welcome_title = tk.Label(
-  welcome, 
-  text="Welcome to Custom Turtle shapes!",
-  font=("Arial", 20, "bold")
+   welcome, 
+   text="Welcome to Custom Turtle shapes!",
+   font=("Arial", 20, "bold")
 )
 welcome_title.pack(pady=15)
 
