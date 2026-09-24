@@ -229,22 +229,22 @@ welcome = tk.Frame(window)
 welcome.pack(expand=True)
 
 welcome_title = tk.Label(
-   welcome, 
-   text="Welcome to Custom Turtle shapes!",
-   font=("Arial", 20, "bold")
+    welcome, 
+    text="Welcome to Custom Turtle shapes!",
+    font=("Arial", 20, "bold")
 )
 welcome_title.pack(pady=15)
 
 welcome_text = tk.Label(
-  welcome,
-  text="Create a shape by clicking on the canvas."
+    welcome,
+    text="Create a shape by clicking on the canvas."
 )
 welcome_text.pack(pady=5)
 
 start_button = tk.Button(
-  welcome,
-  text="Start",
-  command=start_program
+    welcome,
+    text="Start",
+    command=start_program
 )
 start_button.pack(pady=15)
 
